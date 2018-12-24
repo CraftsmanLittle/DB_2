@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/templates/ordersheet.html" line="259" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56db31ee-e880-459e-8658-4fd5f8fea63b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/goods.html" afterDir="false" />
-    </list>
+    <list default="true" id="56db31ee-e880-459e-8658-4fd5f8fea63b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +61,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/goods.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="393" column="32" selection-start-line="393" selection-start-column="32" selection-end-line="393" selection-end-column="32" />
+            <state relative-caret-position="190">
+              <caret line="398" column="93" lean-forward="true" selection-start-line="398" selection-start-column="93" selection-end-line="398" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_book">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -208,7 +212,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -314,12 +318,20 @@
       <workItem from="1545157812037" duration="26558000" />
       <workItem from="1545648541548" duration="575000" />
       <workItem from="1545649162772" duration="696000" />
-      <workItem from="1545653202051" duration="4429000" />
+      <workItem from="1545653202051" duration="4749000" />
     </task>
+    <task id="LOCAL-00001" summary="解决了商品界面的bug">
+      <created>1545657789507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545657789508</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192673000" />
+    <option name="totallyTimeSpent" value="192993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -339,7 +351,7 @@
       <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.17700455" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.36307693" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.2276923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.57076925" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -355,11 +367,15 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24281392" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.2579425" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="解决了商品界面的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决了商品界面的bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -727,8 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/goods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="393" column="32" selection-start-line="393" selection-start-column="32" selection-end-line="393" selection-end-column="32" />
+        <state relative-caret-position="190">
+          <caret line="398" column="93" lean-forward="true" selection-start-line="398" selection-start-column="93" selection-end-line="398" selection-end-column="93" />
         </state>
       </provider>
     </entry>
