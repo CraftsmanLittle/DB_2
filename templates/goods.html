@@ -391,7 +391,7 @@
                 	let count = "";
                 	html = '';
                     $.each(result, function (index, data) {
-                    	if(count == 0){
+                    	if(index == 0){
                     		$('#goods_name').text(data.goods_name);
                     		$('#goods_price').text(data.goods_price);
                     		$('#goods_introduction').text(data.introduction);
@@ -399,7 +399,7 @@
                     		    window.location.href = "/ordersheet?goods_id="+data.goods_id;
                             });
                     		count = data.goods_id
-                    	}else if(count == 1){
+                    	}else if(index == 1){
                     		$('#goods_author').empty();
                     		$('#goods_author').html('作者：<a>'+data.author+'</a>');
                     		$('#goods_publisher').empty();
@@ -431,7 +431,6 @@
 								'</div>'+
 							'</div>';
                     	}
-                    	count++;
                     });
                     $('#comment').html(html);
                 }
