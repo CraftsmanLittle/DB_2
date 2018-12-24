@@ -146,24 +146,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		  <input class="form-control" type="text" placeholder="查询商品…">
 		  <button><i class="ps-icon-search"></i></button>
 		</form>
+
 		  <!--购物车商品数量-->
-		<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i>3</i></span><i class="ps-icon-shopping-cart"></i></a>
-		  <div class="ps-cart__listing">
-			<div class="ps-cart__content">
-			  <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-				<div class="ps-cart-item__thumbnail"><a href="#"></a><img src="./static/style/goods/images/books/数据库1.jpg" alt=""></div>
-				<div class="ps-cart-item__content"><a class="ps-cart-item__title" href="#">数据库系统</a>
-				  <p><span>数量：<i>12</i></span><span>价格：<i>￥176</i></span></p>
-				</div>
-			  </div>
-			</div>
-			<div class="ps-cart__total">
-			  <p>总数量：<span>5</span></p>
-			  <p>总价格：<span>￥528.0</span></p>
-			</div>
-			<div class="ps-cart__footer"><a class="ps-btn" href="/ordersheet">去支付<i class="ps-icon-arrow-left"></i></a></div>
-		  </div>
-		</div>
+		<div class="ps-cart"><a class="ps-cart__toggle" href="/mycart"><i class="ps-icon-shopping-cart"></i></a>
 		<div class="menu-toggle"><span></span></div>
 	  </div>
 	</div>
@@ -218,6 +203,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
 
 
+					 <li>
+                        <a href="/mycart" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的购物车</span> </a>
+                    </li>
 					 <li>
                         <a href="/myorder" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的订单</span> </a>
                     </li>

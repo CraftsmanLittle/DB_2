@@ -29,7 +29,7 @@
           <form class="d-flex align-items-center h-100" action="#">
             <div class="input-group">
               <div class="input-group-prepend bg-transparent">
-                  <i class="input-group-text border-0 mdi mdi-magnify"></i>                
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
               </div>
               <input type="text" class="form-control bg-transparent border-0" placeholder="搜索用户">
             </div>
@@ -246,7 +246,7 @@
         </ul>
       </nav>
       <!-- partial -->
-      <div class="main-panel">          
+      <div class="main-panel">
         <div class="content-wrapper">
             <div id="error_msg_panel" class="row" style="display: none">
                 <div class="col-12">
@@ -272,14 +272,17 @@
                   <h4 class="card-title">发布活动</h4>
                   <div style="margin-bottom: 2em"></div>
                     <form id="form_publish_activity">
-                        <div class="form-group">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">@</span>
-                          </div>
-                          <input type="text" id="goods_id" name="goods_id" class="form-control" placeholder="请输入商品ID (多个商品请用 '/' 分隔)" aria-label="Username" aria-describedby="basic-addon1">
+                        <div id="div_name" class="form-group">
+                          <input type="text" name="name" class="form-control" id="name" placeholder="请输入活动的名称">
                         </div>
-                      </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input type="text" id="goods_id" name="goods_id" class="form-control" placeholder="请输入商品ID (多个商品请用 '/' 分隔)" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
                       <div class="form-group">
                         <div class="input-group">
                           <div class="input-group-prepend">
@@ -292,7 +295,7 @@
                         <div class="form-group row">
                         <div class="col-sm-4">
                           <div class="form-check">
-                            <label id="label_url" class="form-check-label" onclick="activityImage(1)">
+                            <label id="label_url" class="form-check-label" style="cursor: pointer" onclick="activityImage(1)">
                               <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" checked>
                               图片URL
                             </label>
@@ -300,15 +303,12 @@
                         </div>
                           <div class="col-sm-5">
                             <div class="form-check">
-                              <label id="label_upload" class="form-check-label" onclick="activityImage(2)">
+                              <label id="label_upload" class="form-check-label" style="cursor: pointer" onclick="activityImage(2)">
                                 <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2">
                                 上传海报图片
                               </label>
                             </div>
                           </div>
-                        </div>
-                          <div id="div_name" class="form-group">
-                          <input type="text" name="name" class="form-control" id="name" placeholder="请输入活动的名称">
                         </div>
                         <div id="div_url" class="form-group">
                           <input type="text" name="image_url" class="form-control" id="image_url" placeholder="请输入图片URL">
@@ -348,6 +348,7 @@
                     <thead>
                       <tr>
                         <th>活动ID</th>
+                        <th>活动名称</th>
                         <th>涉及商品</th>
                         <th>折扣</th>
                         <th>开始时间</th>
@@ -390,7 +391,7 @@
           let image_url = $("#image_url").val();
           let start_time = $("#start_time").val();
           let end_time = $("#end_time").val();
-          let name = $("#name").val()
+          let name = $("#name").val();
           let form = {"goods_id": goods_id, "goods_id_split": goods_id_split, "activity_price": activity_price, "image_url": image_url,
           "start_time": start_time, "end_time": end_time,"name":name};
           if (goods_id !== "" && activity_price !== "" && image_url !== "" &&
@@ -448,6 +449,7 @@
                   for (let i = 0; i < repos.length; i++) {
                       content += "<tr>" +
                                   "<td>" + repos[i].activity_id + "</td>" +
+                                  "<td>" + repos[i].activity_name + "</td>" +
                                   "<td>" + repos[i].content + "</td>" +
                                   "<td>" + repos[i].pecent + "</td>" +
                                   "<td>" + repos[i].begin_time + "</td>" +
@@ -480,6 +482,7 @@
               data: {"activity_id": activity_id},
               success: repos => {
                   $("#delete_msg").html("【删除" + activity_id + "成功！】");
+                  loadActivityList();
               },
               error: repos => {
                   $("#delete_msg").html("【删除" + activity_id + "失败！】");

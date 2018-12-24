@@ -118,10 +118,9 @@
 		  <input class="form-control" type="text" placeholder="查询商品…">
 		  <button><i class="ps-icon-search"></i></button>
 		</form>
+
 		  <!--购物车商品数量-->
-		<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i id="cart_mark_num"></i></span><i class="ps-icon-shopping-cart"></i></a>
-		  <div class="ps-cart__listing" id="shopping_cart_panel"></div>
-		</div>
+		<div class="ps-cart"><a class="ps-cart__toggle" href="/mycart"><i class="ps-icon-shopping-cart"></i></a>
 		<div class="menu-toggle"><span></span></div>
 	  </div>
 	</div>
@@ -398,53 +397,6 @@
             })
 		}
         getannouncement();
-
-        /**
-         * 加载购物车
-         */
-		function loadCart() {
-            $.ajax({
-                url: "/shopping_cart",
-                type:"GET",
-                dataType: "json",
-                success: repos => {
-                    if (repos.data.length > 0) {
-                        let content = '<div class="ps-cart__content">';
-                        let data = repos.data;
-                        for (let i = 0; i < data.length; i++) {
-                            content += '<div class="ps-cart-item" id="div_'+ data[i].goods_id +'">' +
-                                            '<a class="ps-cart-item__close" id="close_' + data[i].goods_id + '"></a>' +
-                                            '<div class="ps-cart-item__thumbnail">' +
-                                                '<a href="goods?goods_id=' + data[i].goods_id + '"></a>' +
-                                                '<img src="' + data[i].image_url + '" alt="">' +
-                                            '</div>' +
-                                            '<div class="ps-cart-item__content">' +
-                                                '<a class="ps-cart-item__title" href="goods?goods_id=' + data[i].goods_id + '">' + data[i].goods_name + '</a>' +
-                                                '<p><span>数量：<i>'+ data[i].amount + '</i></span><span>价格：<i>￥' + data[i].price + '</i></span></p>' +
-                                            '</div>' +
-                                        '</div>';
-                        }
-                        content += '</div><div class="ps-cart__total"><p>总数量：<span>' + repos.total_num +'</span></p><p>总价格：<span>￥' + repos.total_price + '</span></p></div>';
-                        content += '<div class="ps-cart__footer"><a class="ps-btn" href="#">去支付<i class="ps-icon-arrow-left"></i></a></div>';
-                        // 显示
-                        $("#shopping_cart_panel").html(content);
-                        $("#cart_mark_num").html(repos.goods_type_num);
-                        // 添加监听器
-                        for (let i = 0; i < data.length; i++) {
-                            $("#close_" + data[i].goods_id).on("click", _=> {
-                                $("#div_" + data[i].goods_id).css("display", "none");
-                            })
-                        }
-                    } else {
-                        $("#cart_mark_num").html("0");
-                    }
-                },
-                error: repos => {
-
-                }
-            })
-        }
-        loadCart();
         function addToCart() {
             $.ajax({
                 url: "/add_to_cart",
