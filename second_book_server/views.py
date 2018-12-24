@@ -548,8 +548,9 @@ def shopping_cart(request):
             a["goods_name"] = shop_car.goods_id.goods_name
             result.append(a)
 
-        repos = {"data":result,"total_price":total_price,"total_num":total_amount,"goods_type_num":totol_type_amount}
-        return JsonResponse(repos,safe=False)
+        repos = {"data":result,"total_price":total_price,"total_num":total_amount}
+        return JsonResponse(repos, safe=False)
+
 
 def search(request):
     key = request.POST["key"]

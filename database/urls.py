@@ -82,7 +82,7 @@ urlpatterns = [
 
     #订单接口
     path('ordersheet',views.ordersheet),
-    path('shopping_cart',views.shopping_cart),
+    path('mycart',views.shopping_cart),
     path('admin_publish',views.admin_publish),
     path('admin_activity_delete',views.admin_activity_delete),
 
