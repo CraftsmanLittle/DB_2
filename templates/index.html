@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class=""><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>主页</title>
+
+	<!--&lt;!&ndash; Library - Google Font Familys &ndash;&gt;-->
+	<link href="https://fonts.googleapis.com/css?family=Arizonia|Crimson+Text:400,400i,600,600i,700,700i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/revolution/css/settings.css">
+
+	<!--&lt;!&ndash; RS5.0 Layers and Navigation Styles &ndash;&gt;-->
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/revolution/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/revolution/css/navigation.css">
+
+	<!--&lt;!&ndash; Library - Bootstrap v3.3.5 &ndash;&gt;-->
+    <link rel="stylesheet" type="text/css" href="./static/style/custom/libraries/lib.css">
+
+	<!--&lt;!&ndash; Custom - Common CSS &ndash;&gt;-->
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/css/navigation-menu.css">
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/css/shortcode.css">
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/css/style1.css">
+	<link rel="stylesheet" type="text/css" href="./static/style/custom/css/my_style.css">
+
+	<!-- Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="./static/style/goods/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/ps-icon/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="./static/style/goods/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/ps-icon/style.css">
+	<!-- CSS Library-->
+	<link rel="stylesheet" href="./static/style/goods/plugins/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/owl-carousel/assets/owl.carousel.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/slick/slick/slick.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/bootstrap-select/dist/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/Magnific-Popup/dist/magnific-popup.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/revolution/css/settings.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/revolution/css/layers.css">
+	<link rel="stylesheet" href="./static/style/goods/plugins/revolution/css/navigation.css">
+	<!-- Custom-->
+	<link rel="stylesheet" href="./static/style/goods/css/style.css">
+	<link rel="stylesheet" href="./static/style/goods/css/my_goods_style.css">
+
+	<!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--[if IE 7]><body class="ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+	<!--[if IE 8]><body class="ie8 lt-ie9 lt-ie10"><![endif]-->
+	<!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="./static/style/custom/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="ps-loading">
+<div class="header--sidebar"></div>
+<header class="header">
+  <div class="header__top">
+	<div class="container-fluid">
+	  <div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
+			  <p></p>
+			</div>
+			<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
+			  <div class="header__actions">
+                  {%if is_auth == "True"%}
+                        <a>{{ username }}</a>
+                  {% else %}
+                      <a href="log"><b>登录</b></a>
+				        <a href="registe"><b>注册</b></a>
+                  {%endif %}
+                  <!--
+                    <a>用户001</a>
+				    <a href="log"><b>登录</b></a>
+				    <a href="registe"><b>注册</b></a>
+				    -->
+					<div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">功能服务<i class="fa fa-angle-down"></i></a>
+					  <ul class="dropdown-menu my_text_center">
+						<li><a href="myorder" class=""><i class="fa fa-user"></i> 个人中心</a></li>
+						<li><a href="logout"><i class="fa fa-power-off"></i> 退出登录</a></li>
+					  </ul>
+					</div>
+			  </div>
+			</div>
+	  </div>
+	</div>
+  </div>
+  <nav class="navigation">
+	<div class="container-fluid">
+	  <div class="navigation__column left">
+		<h1><a href="#"><i style="font-weight: 900; color: #9ea13a">校园二手书 <span style="font-weight: 900;color: #777777">平台</span></i></a></h1>
+	  </div>
+	  <div class="navigation__column center">
+		<ul class="main-menu menu">
+		  <li class="menu-item menu-item-has-children"><a href="index">主页</a></li>
+		  <li class="menu-item"><a href="myorder">用户中心</a></li>
+		  <li class="menu-item"><a href="#">联系我们</a></li>
+		</ul>
+	  </div>
+	  <div class="navigation__column right">
+		<form class="ps-search--header" action="do_action" method="post">
+		  <input class="form-control" type="text" placeholder="查询商品…">
+		  <button><i class="ps-icon-search"></i></button>
+		</form>
+		  <!--购物车商品数量-->
+		<div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i id="cart_mark_num"></i></span><i class="ps-icon-shopping-cart"></i></a>
+		  <div class="ps-cart__listing" id="shopping_cart_panel"></div>
+		</div>
+		<div class="menu-toggle"><span></span></div>
+	  </div>
+	</div>
+  </nav>
+</header>
+
+<main>
+	<div style="margin-bottom: 40px"></div>
+			<!-- 活动海报部分 -->
+			<div id="home-revslider" class="slider-section container-fluid no-padding my_home-revslider" style="width: 1250px">
+				<!-- START REVOLUTION SLIDER 5.0 -->
+				<div class="rev_slider_wrapper">
+					<div id="home-slider1" class="rev_slider" data-version="5.0">
+						<ul>
+							<!-- 海报轮换 -->
+							<!-- 海报1 -->
+							<li data-transition="zoomout" data-slotamount="default"  data-easein="easeInOut" data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7">
+								<img src="./static/activity/activity1.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+							</li>
+							<!-- 海报2 -->
+							<li data-transition="zoomout" data-slotamount="default"  data-easein="easeInOut" data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7">
+								<img src="./static/activity/activity2.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+							</li>
+                            <!-- 海报3 -->
+							<li data-transition="zoomout" data-slotamount="default"  data-easein="easeInOut" data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7">
+								<img src="./static/activity/activity3.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+							</li>
+                            <!-- 海报4 -->
+							<li data-transition="zoomout" data-slotamount="default"  data-easein="easeInOut" data-easeout="easeInOut" data-masterspeed="2000" data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7">
+								<img src="./static/activity/activity4.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+							</li>
+						</ul>
+					</div><!-- END REVOLUTION SLIDER -->
+				</div><!-- END OF SLIDER WRAPPER -->
+				<div class="goto-next"><a href="#product-section"><i class="icon icon-Mouse bounce"></i></a></div>
+			</div><!-- Slider Section 1 /- -->
+
+			<div style="margin-top: 60px"></div>
+
+			<!-- Product Section -->
+			<div id="product-section" class="product-section container-fluid no-padding">
+				<!-- Container -->
+				<div class="container">
+					<div class="row">
+						<!-- Section Header -->
+						<div class="section-header">
+							<h3>我们的产品</h3>
+							<p>保证是二手的！</p>
+							<img src="./static/style/custom/images/section-seprator.png" alt="section-seprator" />
+						</div><!-- Section Header /- -->
+						<ul class="products-categories no-left-padding" style="cursor: pointer">
+							<li><a id = "" onclick="getlist(this)">所有商品</a></li>
+							<li><a  onclick="getlist(this)">基础学科</a></li>
+							<li><a  onclick="getlist(this)">语言</a></li>
+							<li><a  onclick="getlist(this)">计算机</a></li>
+                            <li><a  onclick="getlist(this)">经济</a></li>
+							<li><a  onclick="getlist(this)">政治</a></li>
+							<li><a  onclick="getlist(this)">机电</a></li>
+							<li><a  onclick="getlist(this)">法律</a></li>
+							<li><a  onclick="getlist(this)">土木</a></li>
+							<li><a  onclick="getlist(this)">生活</a></li>
+							<li><a  onclick="getlist(this)">艺术</a></li>
+						</ul>
+						<!-- Products -->
+						<ul id = "all" class="products">
+
+						</ul><!-- Products /- -->
+					</div><!-- Row /- -->
+					<div id = "page" class="section-header">
+					</div><!-- Container /- -->
+			</div><!-- Product Section /- -->
+
+			<!-- Latest Blog -->
+			<div class="blog-section latest-blog container-fluid">
+				<!-- Container -->
+				<div class="container">
+					<!-- Section Header -->
+					<div class="section-header">
+						<h3>公告栏</h3>
+						<p>你想知道的一切，都没有哦</p>
+						<img src="./static/style/custom/images/section-seprator.png" alt="section-seprator" />
+					</div><!-- Section Header /- -->
+					<div id = "announcement">
+						
+					</div>
+				</div><!-- Container /- -->
+				<div style="text-align: center;">
+					<a href="#" title="Read More" class="read-more">查看更多信息<i class="fa fa-long-arrow-right"></i></a>
+				</div>
+			</div><!-- Latest Blog /- -->
+			</div>
+		</main>
+
+		<!--页脚-->
+		<div class="ps-footer bg--cover">
+		<div class="ps-footer__copyright">
+		  <div class="ps-container">
+			<div class="row my_center">
+				  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<p>Copyright &copy; 2018.Company name All rights reserved. <a href="#" target="_blank">二手书</a> - Collect from <a href="#" target="_blank">平台</a></p>
+				  </div>
+			</div>
+		  </div>
+		</div>
+		</div><!--end of 页脚-->
+
+
+	<!-- JQuery v1.12.4 -->
+	<script src="./static/style/custom/js/jquery.min.js"></script>
+
+	<!-- Library - Js -->
+	<script src="./static/style/custom/libraries/lib.js"></script>
+
+	<script src="./static/style/custom/libraries/jquery.countdown.min.js"></script>
+
+	<!-- RS5.0 Core JS Files -->
+	<script type="text/javascript" src="./static/style/custom/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+	<script type="text/javascript" src="./static/style/custom/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+	<script type="text/javascript" src="./static/style/custom/revolution/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="./static/style/custom/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="./static/style/custom/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="./static/style/custom/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="./static/style/custom/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="./static/style/custom/js/my_js.js"></script>
+
+	<!-- Library - Theme JS -->
+	<script src="./static/style/custom/js/functions.js"></script>
+
+	<!-- goods js -->
+	<script type="text/javascript" src="./static/style/goods/plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/gmap3.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/imagesloaded.pkgd.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/slick/slick/slick.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/elevatezoom/jquery.elevatezoom.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyAx39JFH5nhxze1ZydH-Kl8xXM3OK4fvcg&amp;region=GB"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<!-- Custom scripts-->
+	<script type="text/javascript" src="./static/style/goods/js/main.js"></script>
+
+	<!--自定义-->
+	<script>
+
+
+		var pageall;
+		var pageno;
+		var pagesize;
+		var zz;
+		function getzz() {
+		    var a = $("ul#all div.listitem");
+		    var zz =new Array(a.length);
+		    for(var i=0;i <a.length;i++){
+		        zz[i]=a[i].innerHTML;
+		    } //div的字符串数组付给zz
+		    return zz;
+		}
+
+		function change(e){
+		    pageno=e;
+		    if(e<1){
+		        e=1;pageno=1;//就等于第1页 ， 当前页为1
+		    }
+		    if(e>pageall){  //如果输入页大于最大页
+		        e=pageall;pageno=pageall; //输入页和当前页都=最大页
+		    }
+		    $("#all").html("");//全部清空
+		    var html="";
+		    for(var i=0;i<pagesize;i++){
+		        html += zz[(e-1)*pagesize+i];//创建一页的li列表
+		        if(zz[(e-1)*pagesize+i+1]==null) break;//超出最后的范围跳出
+		    }
+		    $("ul#all").html(html);//给ul列表写入html
+		    var pageContent="";
+		    pageContent +='<a onClick="change(--pageno)">上一页</a>';
+		    pageContent +=' 第<span id=\"a2\">'+pageno+'</span> /';
+		    pageContent +='<span id="a1">'+pageall+'</span>页';
+		    pageContent +='<a onClick="change(++pageno)">下一页</a>';
+		    $("#page").html(pageContent);
+		}
+
+		function flashs(){
+			zz =getzz();
+		    pageno=1 ; //当前页
+		    pagesize=8; //每页多少条信息
+		    if(zz.length%pagesize===0){
+		        pageall =zz.length/pagesize ;
+		    }else{
+		        pageall =parseInt(zz.length/pagesize)+1;
+		    }   //一共多少页
+		    change(1);
+		}
+        flashs();
+
+		function first(){
+			$.ajax({
+                url: "/goods_list",
+                data: { type: "所有商品"},
+                dataType: "json",
+                success: function (result) {
+                    $('#all').empty();
+                    var html = '';
+                    //遍历返回的数据，查看当前的在线人数
+                    $.each(result, function (index, data) {
+                        html +=
+                        '<div class="listitem"><li class="product photography"><a href="goods?goods_id='+data.goods_id+'"><img src='+data.url+' alt="Product" /><h5>'+data.goods_name+'</h5><span class="price">￥'+data.goods_price+'</span></a><div class="wishlist-box"><a style="cursor: pointer" id="add_' + data.goods_id + '"><i class="fa fa-cart-plus" title="添加到购物车"></i></a><a href="add_to_cart?goods_id=\' + data.goods_id + \'"><i class="fa fa-heart-o" title="收藏商品"></i></a><a href="chat?goods_id=' + data.goods_id + '"><i class="fa fa-comments-o" title="联系商家"></i></a></div></li></div>'
+                    });
+                    $('#all').html(html);
+                    $.each(result, function (index, data) {
+                        $("#add_" + data.goods_id).on("click", _=> {
+                            loadCart();
+                        })
+                    });
+                    flashs();
+                }
+            })
+		}
+        first();
+
+		function getlist(data){
+            $.ajax({
+                url: "/goods_list",
+                data: { type: data.text},
+                dataType: "json",
+                success: function (result) {
+                    $('#all').empty();
+                    var html = '';
+                    $.each(result, function (index, data) {
+                        html +=
+                        '<div class="listitem"><li class="product photography"><a href="goods?goods_id='+data.goods_id+'"><img src='+data.url+' alt="Product" /><h5>'+data.goods_name+'</h5><span class="price">￥'+data.goods_price+'</span></a><div class="wishlist-box"><a style="cursor: pointer" id="add_' + data.goods_id + '"><i class="fa fa-cart-plus" title="添加到购物车"></i></a><a href="=#"><i class="fa fa-heart-o" title="收藏商品"></i></a><a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a></div></li></div>'
+
+                    });
+                    $('#all').html(html);
+                    $.each(result, function (index, data) {
+                        $("#add_" + data.goods_id).on("click", _=> {
+                            loadCart();
+                        })
+                    });
+                    flashs();
+                }
+            })
+		}
+
+		function getannouncement(){
+            $.ajax({
+                url: "http://127.0.0.1:8000/announcement",
+                type:"POST",
+                dataType: "json",
+                success: function (result) {
+                    $('#announcement').empty();
+                    var html = '';
+                    var count = 0;
+                    $.each(result, function (index, data) {
+                        html +=
+                        '<div class="col-md-4 col-sm-6 col-xs-6"><div class="type-post"><div class="entry-cover"></div><div class="blog-content"><h3 class="entry-title"><a href="#" title="new Collectios are imported In Our shop."><b>'+data.an_title+'</b></a></h3><div class="entry-meta"><span class="post-like"><i class="fa fa-book"></i>'+data.type+'</span><span class="post-admin"><i class="fa fa-calendar-o"></i>'+data.date+'</span></div><div class="entry-content"><p>'+data.an_content+'</p></div></div></div></div>'
+							count++;
+							if(count == 3){
+								return false;
+							}
+                    });
+                    $('#announcement').html(html);
+                }
+            })
+		}
+        getannouncement();
+
+        /**
+         * 加载购物车
+         */
+		function loadCart() {
+            $.ajax({
+                url: "/shopping_cart",
+                type:"GET",
+                dataType: "json",
+                success: repos => {
+                    if (repos.data.length > 0) {
+                        let content = '<div class="ps-cart__content">';
+                        let data = repos.data;
+                        for (let i = 0; i < data.length; i++) {
+                            content += '<div class="ps-cart-item" id="div_'+ data[i].goods_id +'">' +
+                                            '<a class="ps-cart-item__close" id="close_' + data[i].goods_id + '"></a>' +
+                                            '<div class="ps-cart-item__thumbnail">' +
+                                                '<a href="goods?goods_id=' + data[i].goods_id + '"></a>' +
+                                                '<img src="' + data[i].image_url + '" alt="">' +
+                                            '</div>' +
+                                            '<div class="ps-cart-item__content">' +
+                                                '<a class="ps-cart-item__title" href="goods?goods_id=' + data[i].goods_id + '">' + data[i].goods_name + '</a>' +
+                                                '<p><span>数量：<i>'+ data[i].amount + '</i></span><span>价格：<i>￥' + data[i].price + '</i></span></p>' +
+                                            '</div>' +
+                                        '</div>';
+                        }
+                        content += '</div><div class="ps-cart__total"><p>总数量：<span>' + repos.total_num +'</span></p><p>总价格：<span>￥' + repos.total_price + '</span></p></div>';
+                        content += '<div class="ps-cart__footer"><a class="ps-btn" href="#">去支付<i class="ps-icon-arrow-left"></i></a></div>';
+                        // 显示
+                        $("#shopping_cart_panel").html(content);
+                        $("#cart_mark_num").html(repos.goods_type_num);
+                        // 添加监听器
+                        for (let i = 0; i < data.length; i++) {
+                            $("#close_" + data[i].goods_id).on("click", _=> {
+                                $("#div_" + data[i].goods_id).css("display", "none");
+                            })
+                        }
+                    } else {
+                        $("#cart_mark_num").html("0");
+                    }
+                },
+                error: repos => {
+
+                }
+            })
+        }
+        loadCart();
+        function addToCart() {
+            $.ajax({
+                url: "/add_to_cart",
+                type:"POST",
+                dataType: "json",
+                data: {"goods_id": ""},
+                success: repos => {
+                    loadCart();
+                }
+            })
+        }
+	</script>
+</body>
+</html>
+
